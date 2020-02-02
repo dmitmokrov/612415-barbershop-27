@@ -19,7 +19,7 @@
         </ul>
         <ul>
           <li>
-            <button type="button">Вход</button>
+            <a href="#">Вход</a>
           </li>
         </ul>
     </nav>
@@ -64,8 +64,8 @@
             <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
           </a>
         </figure>
-        <button>Назад</button>
-        <button>Вперед</button>
+        <button type="button">Назад</button>
+        <button type="button">Вперед</button>
       </section>
       <section>
         <h2>Контактная информация</h2>
@@ -85,7 +85,25 @@
       <section>
         <h2>Записаться</h2>
         <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения</p>
-        <!-- Здесь будет форма -->
+        <form>
+          <p>
+            <label for="record-date">Дата</label>
+            <input type="date" placeholder="08.10.2017" id="record-date">
+          </p>
+          <p>
+            <label for="record-time">Время</label>
+            <input type="time" placeholder="10:00" id="record-time">
+          </p>
+          <p>
+            <label for="record-name">Ваше имя</label>
+            <input type="text" placeholder="Борода" id="record-name">
+          </p>
+          <p>
+            <label for="record-tel">Телефон</label>
+            <input type="tel" placeholder="+7 123 456-78-90" id="record-tel">
+          </p>
+          <button type="submit">Отправить</button>
+        </form>
       </section>
     </main>
     <footer>
@@ -111,11 +129,29 @@
     <section>
       <h2>Личный кабинет</h2>
       <p>Введите пожалуйста свой логин и пароль</p>
-      <!-- Здесь будет форма -->
+      <form>
+        <p>
+          <label class="visually-hidden" for="sign-up-login"></label>
+          <input type="text" placeholder="Логин" id="sign-up-login">
+        </p>
+        <p>
+          <label class="visually-hidden" for="sign-up-password"></label>
+          <input type="password" placeholder="Пароль" id="sign-up-password">
+        </p>
+        <p>
+          <label>
+            <input type="checkbox">
+            Запомните меня
+          </label>
+          <a href="#">Я забыл пароль</a>
+        </p>
+        <button type="submit">Войти</button>
+      </form>
       <button type="button">Закрыть</button>
     </section>
     <section>
       <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p><img src="img/map.png" width="766" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, г. Санкт-Петербург"></p>
       <button type="button">Закрыть</button>
     </section>
   </body>
