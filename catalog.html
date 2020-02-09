@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Барбершоп «Бородинский»</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="header">
+      <nav class="nav">
         <a href="index.html">
           <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
         </a>
@@ -24,18 +26,18 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <h1>Средства для ухода</h1>
-      <ul>
+    <main class="inner-main">
+      <h1 class="heading">Средства для ухода</h1>
+      <ul class="breadcrumb">
         <li><a href="index.html">Главная</a></li>
         <li><a href="catalog.html">Магазин</a></li>
         <li>Средства для ухода</li>
       </ul>
-      <section>
+      <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form>
           <fieldset>
-            <legend>Производители:</legend>
+            <legend class="secondary-heading">Производители:</legend>
             <ul>
               <li>
                 <label>
@@ -76,12 +78,12 @@
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Группы товаров:</legend>
+            <legend class="secondary-heading">Группы товаров:</legend>
             <ul>
               <li>
                 <label>
                   <input type="radio" name="product-groups">
-                  Бритвенные принадлежности
+                  Бритвенные<br>принадлежности
                 </label>
               </li>
               <li>
@@ -98,13 +100,13 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="button" type="submit">Показать</button>
         </form>
       </section>
-      <section>
+      <section class="catalog">
         <h2 class="visually-hidden">Список средств для ухода</h2>
         <ul>
-          <li>
+          <li class="catalog-item">
             <a href="catalog-item.html">
               <h3>   
                 <span>Набор для путешествий</span>
@@ -113,11 +115,11 @@
               <img src="img/product-1.jpg" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
             </a>
             <p>
-              2 900 ₽ 
-              <a href="#">Купить</a>
+              <b>2 900 ₽</b> 
+              <a class="button" href="#">Купить</a>
             </p>
           </li>
-          <li>
+          <li class="catalog-item">
             <a href="catalog-item.html">
               <h3>
                 <span>Увлажняющий кондиционер</span>
@@ -126,11 +128,11 @@
               <img src="img/product-2.jpg" width="220" height="165" alt="Увлажняющий кондиционер «Baxter of California»">
             </a>
             <p>
-              750 ₽ 
-              <a href="#">Купить</a>
+              <b>750 ₽</b>
+              <a class="button" href="#">Купить</a>
             </p>
           </li>
-          <li>
+          <li class="catalog-item">
             <a href="catalog-item.html">
               <h3>
                 <span>Гель для волос</span>
@@ -139,11 +141,11 @@
               <img src="img/product-3.jpg" width="220" height="165" alt="Гель для волос «Suavecito»">
             </a>
             <p>
-              290 ₽ 
-              <a href="#">Купить</a>
+              <b>290 ₽</b> 
+              <a class="button" href="#">Купить</a>
             </p>
           </li>
-          <li>
+          <li class="catalog-item">
             <a href="catalog-item.html">
               <h3>
                 <span>Глина для укладки волос</span>
@@ -152,11 +154,11 @@
               <img src="img/product-4.jpg" width="220" height="165" alt="Глина для укладки волос «American crew»">
             </a>
             <p>
-              500 ₽ 
-              <a href="#">Купить</a>
+              <b>500 ₽</b> 
+              <a class="button" href="#">Купить</a>
             </p>
           </li>
-          <li>
+          <li class="catalog-item">
             <a href="catalog-item.html">
               <h3>
                 <span>Гель для волос</span>
@@ -165,11 +167,11 @@
               <img src="img/product-5.jpg" width="220" height="165" alt="Гель для волос «American crew»">
             </a>
             <p>
-              300 ₽ 
-              <a href="#">Купить</a>
+              <b>300 ₽</b> 
+              <a class="button" href="#">Купить</a>
             </p>
           </li>
-          <li>
+          <li class="catalog-item">
             <a href="catalog-item.html">
               <h3>           
                 <span>Набор для бритья</span>
@@ -178,24 +180,24 @@
               <img src="img/product-6.jpg" width="220" height="165" alt="Набор для бритья «Baxter of California»">
             </a>
             <p>
-              3 900 ₽ 
-              <a href="#">Купить</a>
+              <b>3 900 ₽</b> 
+              <a class="button" href="#">Купить</a>
             </p>
           </li>
         </ul>
-        <ul>
+        <ul class="pagination">
           <li><a href="#">1</a></li>
-          <li><a>2</a></li>
+          <li><a class="active">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
         </ul>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <p>
         Барбершоп «Бородинский»<br>
         Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
-        <a href="map.html">Как нас найти?</a>
+        <a class="footer-link" href="map.html">Как нас найти?</a>
         Телефон: +7 (495) 666-02-66
       </p>
       <div>
@@ -208,7 +210,7 @@
       </div>
       <p>
         Разработано:
-        <a href="https://htmlacademy.ru">HTML Academy</a>
+        <a class="button footer-button" href="https://htmlacademy.ru">HTML Academy</a>
       </p>
     </footer>
   </body>

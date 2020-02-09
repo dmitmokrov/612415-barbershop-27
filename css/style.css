@@ -1,0 +1,278 @@
+/* Подключение шрифтов */
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/ptsansnarrow.woff2") format("woff2"),
+       url("../fonts/ptsansnarrow.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans Narrow";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/ptsansnarrowbold.woff2") format("woff2"),
+       url("../fonts/ptsansnarrowbold.woff") format("woff");
+}
+
+/* Глобальные стили */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #000000;
+  background-image: url("../img/Layer.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* Общие стили */
+
+.heading {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.secondary-heading {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.button {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "PT Sans Narrow", "Arial", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #663d15;
+}
+
+/* Стили шапки */
+
+.header {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav a {
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav a:hover,
+.nav a:active {
+  background-color: #242424;
+}
+
+/* ==========================
+Главная страница
+========================== */
+
+/* Раздел "Преимушества" */
+
+.advantages {
+  text-align: center;
+  color: #ffffff; 
+}
+
+.advantages ul {
+  list-style: none;
+}
+
+/* Раздел "Новости" */
+
+.news {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.news ul {
+  list-style: none;
+}
+
+.news time {
+  text-transform: none;
+}
+
+/* Раздел "Фотогалерея" */
+
+.photogallery {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Раздел "Контактная информация" */
+
+.contacts {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Раздел "Записаться" */
+
+.record {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.record-form label:hover {
+  color: #663d15;
+}
+
+.record-form input {
+  font: inherit;
+
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+
+.record-form input:focus {
+  border-color: #663d15;
+}
+
+/* Подвал сайта */
+
+.footer {
+  color: #ffffff;
+  background-color: #333333;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.footer .footer-link {
+  text-decoration: underline;
+}
+
+.footer .footer-link:hover,
+.footer .footer-link:focus,
+.footer.footer-link:active {
+  text-decoration: none;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer-button:hover,
+.footer-button:focus,
+.footer-button:active {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* ==========================
+Страница каталога
+========================== */
+
+.inner-main {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* "Хлебные крошки" */
+
+.breadcrumb {
+  color: #aba9a7;
+  list-style: none;
+}
+
+.breadcrumb a {
+  line-height: 20px;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Раздел "Фильтр" */
+
+.filter ul {
+  list-style: none;
+}
+
+.filter label {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* Раздел Каталога */
+
+.catalog ul {
+  list-style: none;
+}
+
+.catalog-item a {
+  text-decoration: none;
+}
+
+.catalog-item h3 {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.catalog-item span:first-child {
+  text-transform: none;
+}
+
+.catalog-item b {
+  font-weight: 700;
+}
+
+.catalog-item .button {
+  line-height: 20px;
+}
+
+/* Пагинация */
+
+.pagination a {
+  line-height: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.pagination a:hover {
+  background-color: #663d15;
+}
+
+.pagination a.active {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+
+
