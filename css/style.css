@@ -38,10 +38,24 @@ body {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   text-transform: uppercase;
   color: #ffffff;
+
   background-color: #000000;
-  background-image: url("../img/Layer.png");
+  background-image: url("../img/bg.png");
   background-position: top center;
   background-repeat: no-repeat;
+}
+
+.inner-page {
+  color: #000000;
+
+  background-color: #f9f6f3;
+  background-image: url("../img/pattern-light.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Общие стили */
@@ -57,14 +71,15 @@ body {
 }
 
 .button {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "PT Sans Narrow", "Arial", sans-serif;
-  text-decoration: none;
+  font: inherit;
+
+  text-align: center;
   text-transform: uppercase;
+  vertical-align: middle;
   color: #ffffff;
+
   background-color: #000000;
+  border: none;
 }
 
 .button:hover,
@@ -75,24 +90,28 @@ body {
 
 /* Стили шапки */
 
-.header {
+.main-navigation {
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
+
   background-color: #000000;
 }
 
-.nav ul {
+.site-navigation,
+.user-navigation {
   list-style: none;
 }
 
-.nav a {
-  font-size: 16px;
-  line-height: 20px;
-  text-decoration: none;
-  color: inherit;
+.site-navigation a,
+.user-navigation a {
+  color: #ffffff;
 }
 
-.nav a:hover,
-.nav a:active {
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
   background-color: #242424;
 }
 
@@ -102,177 +121,269 @@ body {
 
 /* Раздел "Преимушества" */
 
-.advantages {
-  text-align: center;
-  color: #ffffff; 
+.features {
+  color: #ffffff;
 }
 
-.advantages ul {
+.features-list {
   list-style: none;
+}
+
+.feature-item {
+  text-align: center;
 }
 
 /* Раздел "Новости" */
 
-.news {
+.index-columns {
   color: #000000;
-  background-color: #ffffff;
+
+  background-color: #f8f5f2;
+  background-image: url("../img/pattern-light.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
 }
 
-.news ul {
+.news-list {
   list-style: none;
 }
 
-.news time {
+.news-item time {
   text-transform: none;
 }
 
 /* Раздел "Фотогалерея" */
 
-.photogallery {
-  color: #000000;
-  background-color: #ffffff;
-}
-
-/* Раздел "Контактная информация" */
-
-.contacts {
-  color: #000000;
-  background-color: #ffffff;
+.gallery-content {
+  background-color: #cccccc;
+  border: 7px solid #ffffff;
 }
 
 /* Раздел "Записаться" */
 
-.record {
-  color: #000000;
-  background-color: #ffffff;
-}
-
-.record-form label:hover {
-  color: #663d15;
-}
-
-.record-form input {
+.appointment-item input {
   font: inherit;
 
   background-color: transparent;
   border: 2px solid #000000;
 }
 
-.record-form input:focus {
+.appointment-item input:focus {
   border-color: #663d15;
 }
 
 /* Подвал сайта */
 
-.footer {
+.main-footer {
   color: #ffffff;
-  background-color: #333333;
+
+  background-color: #212121;
+  background-image: url("../img/pattern-dark.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
 }
 
-.footer a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.footer .footer-link {
+.footer-contacts a {
   text-decoration: underline;
+  color: #ffffff;
 }
 
-.footer .footer-link:hover,
-.footer .footer-link:focus,
-.footer.footer-link:active {
+.footer-contacts a:hover,
+.footer-contacts a:focus {
   text-decoration: none;
 }
 
-.footer ul {
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
   list-style: none;
 }
 
-.footer-button:hover,
-.footer-button:focus,
-.footer-button:active {
+.social-button {
+  color: #ffffff;
+}
+
+.social-button:hover,
+.social-button:focus {
   color: #000000;
+
   background-color: #ffffff;
+}
+
+.footer-copyright {
+  text-align: center;
+}
+
+.footer-copyright .button:hover,
+.footer-copyright .button:focus {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+/* Модальное окно */
+
+.modal {
+  color: #000000;
+
+  background-color: #f8f3f0;
+  background-image: url("../img/pattern-light.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  font: inherit;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+
+.login-form input:focus {
+  border-color: #663d15;
+}
+
+.login-checkbox:hover,
+.login-checkbox:focus {
+  color: #663d15;
+}
+
+.restore {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.restore:hover,
+.restore:focus {
+  text-decoration: none;
 }
 
 /* ==========================
 Страница каталога
 ========================== */
 
-.inner-main {
-  color: #000000;
-  background-color: #ffffff;
-}
-
 /* "Хлебные крошки" */
 
-.breadcrumb {
-  color: #aba9a7;
+.breadcrumbs {
   list-style: none;
 }
 
-.breadcrumb a {
-  line-height: 20px;
-  text-decoration: none;
+.breadcrumbs a {
   color: #000000;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  text-decoration: underline;
+}
+
+.breadcrumbs-current {
+  color: #aba9a7;
 }
 
 /* Раздел "Фильтр" */
 
-.filter ul {
-  list-style: none;
+.filter fieldset {
+  border: none;
 }
 
-.filter label {
-  font-size: 14px;
+.filter ul {
+  list-style: none;
   line-height: 18px;
+}
+
+.filter-input:hover + label,
+.filter-input:focus + label {
+  color: #663d15;
+}
+
+.filter-input:disabled + label {
+  color: #000000;
+
+  opacity: 0.5;
 }
 
 /* Раздел Каталога */
 
-.catalog ul {
+.catalog-list {
   list-style: none;
 }
 
+.catalog-item {
+  background-color: #f8f8f8;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
 .catalog-item a {
-  text-decoration: none;
+  color: #000000;
 }
 
 .catalog-item h3 {
   font-size: 14px;
   line-height: 18px;
-  color: #000000;
 }
 
-.catalog-item span:first-child {
+.catalog-category {
   text-transform: none;
 }
 
-.catalog-item b {
+.catalog-item-price b {
   font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+
+  background-color: #e5e5e5;
 }
 
-.catalog-item .button {
+.catalog-item-price .button {
   line-height: 20px;
+  color: #ffffff;
 }
 
 /* Пагинация */
 
-.pagination a {
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
   line-height: 18px;
-  text-decoration: none;
   color: #ffffff;
+
   background-color: #000000;
 }
 
-.pagination a:hover {
+.pagination-item a:hover,
+.pagination-item a:focus,
+.pagination-item a:active {
   background-color: #663d15;
 }
 
-.pagination a.active {
+.pagination-item-current a {
   color: #000000;
+
   background-color: #ffffff;
 }
+
+.pagination-item a:hover,
+.pagination-item a:focus,
+.pagination-item a:active {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+
 
 
 
